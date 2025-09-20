@@ -1,6 +1,6 @@
 title: All Quiet on the Western Front
 subtitle: Censorship and violence over a movie...
-view-if: year = 1930 and month = 12 and spd_prussia
+view-if: year = 1930 and month = 12 and sdf_prussia
 max-visits: 1
 tags: event
 new-page: true
@@ -8,38 +8,36 @@ face-image: img/All_Quiet.jpg
 
 = All Quiet on the Western Front
 
-The American film *All Quiet on the Western Front*, based on the German novel *Im Westen nichts Neues* by Erich Maria Remarque, is a film about the experiences of German soldiers in the Great War, and how they gradually became disillusioned with the ideas of patriotism and nationalism. 
+A new stage play, *The People’s Tragedy*, has opened in London. Written by a radical dramatist, it depicts the miseries of factory labour and the hypocrisy of Parliament, ending with the call for workers to unite.  
 
-As an anti-war film, it is the target of major protest by far-right actors, especially the Nazis and the Stahlhelm. They are calling for the government to ban the film. If we do not ban it, the SA threatens to violently stop the film from being shown or watched.
+Already, conservative voices denounce the work as “seditious,” while working men flock to see it. If we do not act, there may be riots at the theatres, either from those defending the play or those demanding its closure...
 
-- @ban: Ban the film, to prevent Nazi violence.
-- @allow: Allow the film to be shown.
-- @allow_protect: Allow the film to be shown, and use the Prussian police to prevent Nazi disruptions.
-- @everyone: In fact, everyone needs to learn the lessons of this film. Give free tickets to students and government employees.
+- @ban: Ban the play, to prevent violence.
+- @allow: Allow the play to be shown.
+- @allow_protect: Allow the play to be shown, and deploy London constables to prevent disruptions.
+- @everyone: In fact, everyone needs to learn the lessons of this play. Give free tickets to students and government employees.
 
 @ban
-on-arrival: old_middle_nsdap += 5; new_middle_nsdap += 4; workers_nsdap += 2; unemployed_nsdap += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
+on-arrival: old_middle_bnu += 5; new_middle_bnu += 4; workers_bnu += 2; unemployed_bnu += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
 
-When we ban the film, the Nazis immediately celebrate it as a major victory; they claim that even the red Marxists agree with them! It is a major boost to their morale.
-
+When the play is banned, labourers decry it as proof that free speech does not exist for the working man. The BNU is pleased, but our party’s standing among workers weakens.  
 
 @allow
-on-arrival: nationalism += 3; old_middle_nsdap += 4; new_middle_nsdap += 3; workers_nsdap += 1; sa_strength += 15; pro_republic -= 3; strife += 1
+on-arrival: nationalism += 3; old_middle_bnu += 4; new_middle_bnu += 3; workers_bnu += 1; sa_strength += 15; pro_republic -= 3; strife += 1
 
-While we allow the film, showings are marred by violence. Showings of the film eventually stop, and the Nazis claim victory.
-
+The play runs, though scuffles break out at some showings. The authorities turn a blind eye, but the controversy gives the BNU more attention.
 
 @allow_protect
 choose-if: prussian_police_loyalty >= 0.65
-unavailable-subtitle: The police are not willing to protect the film.
+unavailable-subtitle: The police are not reliable enough to guard the theatres.
 on-arrival: nationalism -= 4; pro_republic += 4*(1-dissent); strife += 1
 
-Under the protection of the police, the people are allowed to watch the film in peace. Nazi disturbances are kept to a minimum.
+With constables on guard, the play is performed without major disruption. The crowds cheer the message, and the sense of solidarity grows.
 
 @everyone
 choose-if: prussian_police_loyalty >= 0.75
-unavailable-subtitle: The police are unable to guarantee the safety of all the attendees.
-on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
+unavailable-subtitle: The constables are unable to guarantee the safety of all the attendees.
+on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_bnu -= 3; unemployed_bnu -= 3; new_middle_bnu -= 3
 
-Under police protection, crowds throng the film's showings, as Nazis protest outside. The reception is mixed, but a new national conversation develops, reexamining the right-wing histories of the war. Quietly, many minds are changed, or at least affected in subtle ways.
+Free performances are staged, drawing immense crowds of workers and apprentices. The play sparks conversations in taverns and workshops across London, stoking the fires of reform.
 
