@@ -1,12 +1,12 @@
-title: All Quiet on the Western Front
-subtitle: Censorship and violence over a movie...
+title: The People's Tragedy
+subtitle: Censorship and violence over a theater play...
 view-if: year = 1930 and month = 12 and sdf_prussia
 max-visits: 1
 tags: event
 new-page: true
 face-image: img/All_Quiet.jpg
 
-= All Quiet on the Western Front
+= The People's Tragedy
 
 A new stage play, *The People’s Tragedy*, has opened in London. Written by a radical dramatist, it depicts the miseries of factory labour and the hypocrisy of Parliament, ending with the call for workers to unite.  
 
@@ -20,7 +20,7 @@ Already, conservative voices denounce the work as “seditious,” while working
 @ban
 on-arrival: old_middle_bnu += 5; new_middle_bnu += 4; workers_bnu += 2; unemployed_bnu += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
 
-When the play is banned, labourers decry it as proof that free speech does not exist for the working man. The BNU is pleased, but our party’s standing among workers weakens.  
+When the play is banned, labourers decry it as proof that free speech does not exist for the working man. The bourgeoise parties are pleased, but our party’s standing among workers weakens.  
 
 @allow
 on-arrival: nationalism += 3; old_middle_bnu += 4; new_middle_bnu += 3; workers_bnu += 1; sa_strength += 15; pro_republic -= 3; strife += 1
@@ -39,5 +39,5 @@ choose-if: prussian_police_loyalty >= 0.75
 unavailable-subtitle: The constables are unable to guarantee the safety of all the attendees.
 on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_bnu -= 3; unemployed_bnu -= 3; new_middle_bnu -= 3
 
-Free performances are staged, drawing immense crowds of workers and apprentices. The play sparks conversations in taverns and workshops across London, stoking the fires of reform.
+Free performances are staged, drawing immense crowds of workers and apprentices. The play sparks conversations in taverns and workshops across London, stoking the fires of change.
 
